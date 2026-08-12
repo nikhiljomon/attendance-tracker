@@ -1,8 +1,15 @@
 {
+  "scripts": {
+    "dev": "concurrently --names backend,frontend --prefix-colors blue,magenta \"npm run dev --prefix Backend\" \"npm run dev --prefix Frontend/vite-project\"",
+    "backend": "npm run dev --prefix Backend",
+    "frontend": "npm run dev --prefix Frontend/vite-project",
+    "build": "npm run build --prefix Frontend/vite-project"
+  },
   "dependencies": {
     "lucide-react": "^1.24.0"
   },
   "devDependencies": {
+    "concurrently": "^10.0.4",
     "nodemon": "^3.1.14"
   }
 }
